@@ -17,7 +17,7 @@ angular.module('uiMessages', []).directive('uiMessages', function() {
                 var oneElementAlreadyShowed = false;
                 angular.forEach(messageElements, function(messageElement) {
                     messageElement = angular.element(messageElement);
-                    var message = messageElement.attr('uiMessage') || messageElement.attr('when');
+                    var message = messageElement.attr('ui-message') || messageElement.attr('when');
                     if (!oneElementAlreadyShowed && messages[message] && messages[message] === true) {
                         messageElement.css('display', 'block');
                         oneElementAlreadyShowed = true;
